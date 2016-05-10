@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FinishStartFees.App" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinishStartFees.FeesSheet" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAEAAAAAAAABAAAAAACAABAAAAAAAEBAAgAAAIA=</HashCode>
+      <FileName>FeesSheet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinishStartFees.FileScan2" Collapsed="true">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAgIEAAAAAAAAAAAAAwAAAAgEAAAAAAAAQA=</HashCode>
+      <FileName>FileScan2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinishStartFees.MainWindow" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAQACEAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAA=</HashCode>
+      <FileName>FinishStartFees.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="FinishStartFees.DateandValue" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>FeesSheet.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="FinishStartFees.feeColsStruct" Collapsed="true">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAACMAAQAgAEQAAAAAAAAAA=</HashCode>
+      <FileName>FeesSheet.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="FinishStartFees.fileScanStruct" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAgIEAAAAAAAAAAAAAwAAAAgEAAAAAAAAQA=</HashCode>
+      <FileName>FeesSheet.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
