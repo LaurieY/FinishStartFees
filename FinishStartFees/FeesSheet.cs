@@ -85,7 +85,8 @@ namespace FinishStartFees
             if(numberCols.Count!=2)
             {
                 MessageBox.Show("Problem Not two decimals on the chosen row for RECIBO DEL analysis on row number" + reciboRow.Row, "Problem ..  aborting");
-                Application.Current.MainWindow.Close();
+                Application.Current.Shutdown();
+                return;
             }
 
 
@@ -210,7 +211,8 @@ namespace FinishStartFees
                 else
                 {
                     MessageBox.Show("Problem PropertyIndex not convertible to long type converting " + prop.DisplayText, "Problem ..  aborting");
-                    Application.Current.MainWindow.Close();
+                    Application.Current.Shutdown();
+                    return;
                 }
 
                 fileScan2[aa].startRow = prop.Row + 1;
@@ -285,7 +287,13 @@ namespace FinishStartFees
                 if ((foundRow != null))
                 {
                     //  fileScan[prop]["startbalance"] =                        foundRow.Row;
-                    fileScan2[prop].startBalance = (decimal)sheet[foundRow.Row, feeCols.balanceCol].Number;
+                    if(sheet[foundRow.Row, feeCols.balanceCol].HasNumber) {
+                    fileScan2[prop].startBalance = (decimal)sheet[foundRow.Row, feeCols.balanceCol].Number; }
+                    else {
+                        MessageBox.Show("No number where one expected \n in File " + System.IO.Path.GetFileName(fileName) + " Cell " + sheet[foundRow.Row, feeCols.balanceCol].AddressLocal + " ", "Terminal Error");
+                        Application.Current.Shutdown();
+                        return;
+                    }
                     //startRow depends on whether there is a ASIENTO DE APERTURA Row
                     // If no ASIENTA startRow is 1 more than the propert row
                     //if there is an ASSIENTA row then startRow is 1 more than that
