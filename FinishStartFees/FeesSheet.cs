@@ -74,7 +74,12 @@ namespace FinishStartFees
         public void getvariousCols(IWorksheet sheet)
         {
             // return  ints for the columns for fees and balance taken as the 2 decimals on a "RECIBO DEL" row and adjusted for zero base column numbers
-            IRange reciboRow = sheet.FindFirst("RECIBO DEL", ExcelFindType.Text);
+           // IRange reciboRow = sheet.FindFirst("RECIBO DEL", ExcelFindType.Text);
+            IRange[] reciboRows = sheet.FindAll("RECIBO DEL", ExcelFindType.Text);
+            /***********
+             ignore the first Recibo as its sometimes wrong
+            ***************/
+            IRange reciboRow = reciboRows[4];
             int reciboRowCol = reciboRow.Column;
             List<int> numberCols = new List<int>();
             IRange [] reciboRowCells = reciboRow.EntireRow.Cells;
