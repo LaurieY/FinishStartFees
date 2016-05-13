@@ -6,15 +6,16 @@
         xmlns:local="clr-namespace:FinishStartFees"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Name="FinishStartFees" x:Class="FinishStartFees.MainWindow"
         mc:Ignorable="d"
-        Title="FinishStartFees" Height="350" Width="800" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+        Title="FinishStartFees" Height="371" Width="800" ScrollViewer.HorizontalScrollBarVisibility="Visible">
     <Grid Margin="0,0,-36,0">
-        <Button x:Name="button" Content="Compare" HorizontalAlignment="Left" Margin="194,57,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Button x:Name="bCompare" Content="Compare" HorizontalAlignment="Left" Margin="324,46,0,0" VerticalAlignment="Top" Width="76" Click="bCompare_Click"/>
         <Button x:Name="button1" Content="Open FeeFile 1" HorizontalAlignment="Left" Margin="46,15,0,0" VerticalAlignment="Top" Width="83" ToolTip="Open First FeeFile" Click="button1_Click"/>
-        <Button x:Name="button2" Content="Open Feefile2" HorizontalAlignment="Left" Margin="350,15,0,0" VerticalAlignment="Top" Width="85" Click="button2_Click"/>
+        <Button x:Name="button2" Content="Open Feefile2" HorizontalAlignment="Left" Margin="506,15,0,0" VerticalAlignment="Top" Width="86" Click="button2_Click"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="19,43,0,0" TextWrapping="Wrap" Text="First File" VerticalAlignment="Top" Width="170"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="298,43,0,0" TextWrapping="Wrap" Text="Second File" VerticalAlignment="Top" Width="201"/>
-        <ScrollViewer x:Name="ResultsScroll" HorizontalAlignment="Left" Height="186" Margin="27,116,0,0" VerticalAlignment="Top" Width="695" BorderBrush="Black" BorderThickness="20,20,2,2"/>
-        <Label x:Name="label" Content="Results" HorizontalAlignment="Left" Margin="27,85,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.675,0.295"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="444,43,0,0" TextWrapping="Wrap" Text="Second File" VerticalAlignment="Top" Width="202"/>
+        <ScrollViewer x:Name="ResultsScroll" HorizontalAlignment="Left" Height="186" Margin="27,130,0,0" VerticalAlignment="Top" Width="695" BorderBrush="Black" BorderThickness="20,20,2,2" RenderTransformOrigin="0.512,0.497"/>
+        <Label x:Name="label" Content="Results" HorizontalAlignment="Left" Margin="27,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.675,0.295"/>
+        <Button x:Name="bSummarise" Content="Summarise" HorizontalAlignment="Left" Margin="158,71,0,0" VerticalAlignment="Top" Width="75" Click="bSummarise_Click"/>
 
     </Grid>
 </Window>

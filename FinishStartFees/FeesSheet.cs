@@ -374,7 +374,7 @@ namespace FinishStartFees
          *  as totals
         ***************/
 
-        public decimal sumofNumberCols(IWorksheet sheet, long property, int colNum) // TODO: also save individual entries for the simolify task leading to OCM exctract
+        public decimal sumofNumberCols(IWorksheet sheet, long property, int colNum) 
         {
             IRange[]  setofNumberCols = sheet.Range[(int)fileScan2[property].startRow, 
                 colNum, (int)fileScan2[property].endRow-1, colNum].Cells;
@@ -385,6 +385,34 @@ namespace FinishStartFees
 
             }
             return colTotal;
+        }
+
+        /// <param name="sheet">Takes the iWorksheet object and converts it into a summary IWorksheet Object</param>
+        public Object[,] summariseFeeFile(FeesSheet sheet)
+        {/// Todo  
+            object[,] array2 = new object[sheet.fileScan2.Count+1, 6];
+            int i = 0;
+           
+            foreach (long prop in sheet.fileScan2.Keys) {
+                if (i == 0) {// Titles
+                    array2[i, 0] = "Propert ID";
+                    array2[i, 1] = "Property";
+                    array2[i, 2] = "Start Balance";
+                    array2[i, 3] = "Total Fees";
+                    array2[i, 4] = "Total Payments";
+                    array2[i, 5] = "Finish Balance";
+                    i++;
+                }
+                array2[i,0] = prop;
+                array2[i, 1] = sheet.fileScan2[prop].propName;
+                array2[i, 2] = sheet.fileScan2[prop].startBalance;
+                array2[i, 3] =sheet.fileScan2[prop].feeTotal;
+                array2[i, 4] =sheet.fileScan2[prop].payTotal;
+                array2[i, 5] =sheet.fileScan2[prop].finishBalance;
+                i++;
+            }
+
+            return array2;//  throw new System.NotImplementedException();
         }
     }
 }
